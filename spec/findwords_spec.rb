@@ -13,4 +13,7 @@ describe "Find words method in FindWords class" do
 	it "another words not be included at this array" do
 		expect(@wordsarray.find_words2("text","test_text.txt")).not_to include("texx","this")
 	end
+	it "must return all worlds with letters from the word that was given" do
+		expect(@wordsarray.find_words2("text","test_text.txt").count).to eq(8)
+	end
 end
